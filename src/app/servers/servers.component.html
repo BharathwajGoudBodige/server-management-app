@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+           <ul class="list-group">
+               <li class="list-group-item" *ngFor="let server of servers">
+                {{server.name}}
+               </li>
+           </ul>
+           <button class="btn btn-success" (click)="onNavigate()">Goto Servers</button>
+           <a routerLink="../servers">Goto Servers</a> <!--http://localhost:4200/servers/servers(Navigating to Page Not Found-404)-->
+        </div>
+    </div>
+</div>
+<!--routerLink="servers" is a relative path-->
+<!--routerLink="/servers" or routerLink="../servers" is a absolute path(Gives Correct Output)-->
